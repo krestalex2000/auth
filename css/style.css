@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(12, 12, 163, 0.6890951276102089) 64%, rgba(0, 212, 255, 1) 100%);
+}
+
+.form-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.form-title {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.form__input, .form__button {
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form__button {
+  padding: 10px;
+  background-color: #000;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.allowed, .closed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.allowed {
+  background-image: url('/allowed.png');
+}
+
+.closed {
+  background-image: url('/closed.png');
+}
+
+.allowed.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.closed.active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
