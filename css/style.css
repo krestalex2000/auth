@@ -90,11 +90,11 @@ html {
 }
 
 .allowed {
-  background-image: url('/allowed.png');
+  background-image: url('./allowed.png');
 }
 
 .closed {
-  background-image: url('/closed.png');
+  background-image: url('./closed.png');
 }
 
 .allowed.active {
