@@ -8,7 +8,7 @@ const accessClosed = document.querySelector('.closed')
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  fetch('/db.json')
+  fetch('./db.json')
     .then((res) => res.json())
     .then((data) => {
       for (let user of data) {
